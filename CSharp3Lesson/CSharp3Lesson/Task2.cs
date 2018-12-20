@@ -10,6 +10,17 @@ namespace CSharp3Lesson
     {
         static void Task2()
         {
+
+        
+
+         
+        Console.WriteLine("\nНажмите кнопку \"Пробел\" для повтора этого решения или любую другую для возврата к выбору задания");
+        ConsoleKeyInfo key = Console.ReadKey();
+        if (key.Key == ConsoleKey.Spacebar)
+        {
+          Task2();
         }
+         else return;
+       }
     }
 }
