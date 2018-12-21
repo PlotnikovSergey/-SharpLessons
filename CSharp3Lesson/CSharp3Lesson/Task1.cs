@@ -97,7 +97,7 @@ namespace CSharp3Lesson
             result = complex1.Multi(complex2);
             Console.WriteLine("Умножение: " + result.ToString());
 
-            restart();
+            restart1();
         } 
 
         class ComplexClass
@@ -157,7 +157,7 @@ namespace CSharp3Lesson
             }
         }
 
-        static void restart()
+        static void restart1()
         {
             Console.WriteLine("\nНажмите кнопку \"Пробел\" для повтора этого решения или любую другую для возврата к выбору задания");
             ConsoleKeyInfo key = Console.ReadKey();

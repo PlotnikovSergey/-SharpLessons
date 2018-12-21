@@ -11,7 +11,6 @@ namespace CSharp3Lesson
                 "Сами числа и сумму вывести на экран, используя tryParse; б) Добавить обработку исключительных ситуаций на то, что могут быть введены некорректные данные.При возникновении ошибки " +
                 "вывести сообщение.Напишите соответствующую функцию;\n");
 
-            bool flag=true;
             int input = 0;
             int n = 0;
             
@@ -20,21 +19,19 @@ namespace CSharp3Lesson
                 Console.WriteLine("Введите целое число:");
                 while (!int.TryParse(Console.ReadLine(), out input))
                 {
-                    // Int32 inp = Int32.Parse(Console.ReadLine());
-                    // input = inp;
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Некорректные данные!");
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Введите целое число:");
                 }
-
                 if (input > 0 && input % 2 != 0)
                 {
                     n++;
                 }
             }
             while (input != 0);
-                
 
-            Console.WriteLine("\nСреди введенных чисел- " + n + " положительных нечетных.");          
+            Console.WriteLine("\nСреди введенных чисел- " + n + " положительн" + (n != 1 ?"ых":"ое") + " нечетн" + (n != 1 ? "ых" : "ое") + ".");  
             Console.WriteLine("\nНажмите кнопку \"Пробел\" для повтора этого решения или любую другую для возврата к выбору задания");
             ConsoleKeyInfo key = Console.ReadKey();
             if (key.Key == ConsoleKey.Spacebar)

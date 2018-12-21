@@ -11,111 +11,106 @@ namespace CSharp3Lesson
                 "Написать программу, демонстрирующую все разработанные элементы класса. **Добавить проверку, чтобы знаменатель не равнялся 0.Выбрасывать исключение ArgumentException" +
                 "Знаменатель не может быть равен 0; Добавить упрощение дробей.\n");
 
-            //            Console.WriteLine("Тестируем класс:\n");
-            //            TestClass();
-            //        }
+            Fractions fraction1 = new Fractions();
+            Fractions fraction2 = new Fractions();
+            fraction1.setNumerator(1);
+            fraction1.setDenominator(2);
+            fraction2.setNumerator(1);
+            fraction2.setDenominator(2);
+            Console.WriteLine("Первая дробь: " + fraction1.ToString());
+            Console.WriteLine("Вторая дробь: " + fraction2.ToString()+ "\n");
+ 
+            Fractions result = new Fractions();
+            
+            result = fraction1.Plus(fraction2);
+            Console.WriteLine("Сумма: {0}", result.ToString());
 
-            //        static void TestClass()
+            result = fraction1.Minus(fraction2);
+            Console.WriteLine("Разность: {0}", result.ToString());
 
-            //        {   // Описали ссылку на объект.
-            //            ComplexClass complex1;
-            //            // Создали объект и сохранили ссылку на него в complex1.
-            //            complex1 = new ComplexClass(1, 1);
-            //            // Описали объект и создали его.
-            //            ComplexClass complex2 = new ComplexClass(2, 2);
-            //            // С помощью свойства Im изменили внутреннее (приватное) поле im.
-            //            complex2.Im = 3;
-            //            // Создали ссылку на объект.
-            //            ComplexClass result;
-            //            // Так как в методе Plus создается новый объект,
-            //            // в result сохраняем ссылку на вновь созданный объект.
-            //            result = complex1.Plus(complex2);
-            //            Console.WriteLine(result.ToString());
+            result = fraction1.Multiply(fraction2);
+            Console.WriteLine("Произведение: {0}", result.ToString());
 
-            //            result = complex1.Minus(complex2);
-            //            Console.WriteLine(result.ToString());
+            result = fraction1.Divide(fraction2);
+            Console.WriteLine("Деление: {0}", result.ToString());
 
-            //            result = complex1.Multi(complex2);
-            //            Console.WriteLine(result.ToString());
-
-            //            restart();
-
-            //        }
-
-            //        class ComplexClass
-            //        {
-            //            // Поля приватные.
-            //            private double im;
-            //            // По умолчанию элементы приватные, поэтому private можно не писать.
-            //            double re;
-            //            // Конструктор без параметров.
-            //            public ComplexClass()
-            //            {
-            //                im = 0;
-            //                re = 0;
-            //            }
-            //            // Конструктор, в котором задаем поля.
-            //            // Специально создадим параметр re, совпадающий с именем поля в классе.
-            //            public ComplexClass(double _im, double re)
-            //            {
-            //                // Здесь имена не совпадают, и компилятор легко понимает, что чем является.
-            //                im = _im;
-            //                // Чтобы показать, что к полю нашего класса присваивается параметр,
-            //                // используется ключевое слово this
-            //                // Поле параметр
-            //                this.re = re;
-            //            }
-            //            public ComplexClass Plus(ComplexClass x2)
-            //            {
-            //                ComplexClass x3 = new ComplexClass();
-            //                x3.im = x2.im + im;
-            //                x3.re = x2.re + re;
-            //                return x3;
-            //            }
-
-            //            public ComplexClass Minus(ComplexClass x2)
-            //            {
-            //                ComplexClass x3 = new ComplexClass();
-            //                x3.im = im - x2.im;
-            //                x3.re = re - x2.re;
-            //                return x3;
-            //            }
-
-            //            public ComplexClass Multi(ComplexClass x)
-            //            {
-            //                ComplexClass y = new ComplexClass();
-            //                y.im = re * x.im + im * x.re;
-            //                y.re = re * x.re - im * x.im;
-            //                return y;
-            //            }
-
-            //            // Свойства - это механизм доступа к данным класса.
-            //            public double Im
-            //            {
-            //                get { return im; }
-            //                set
-            //                {
-            //                    // Для примера ограничимся только положительными числами.
-            //                    if (value >= 0) im = value;
-            //                }
-            //            }
-            //            // Специальный метод, который возвращает строковое представление данных.
-            //            public string ToString()
-            //            {
-            //                string sign = im > 0 ? "+" : "";
-            //                return re + sign + im + "i";
-            //            }
-            //        }
-
-            //        static void restart()
-            //        {
-            //            Console.WriteLine("\nНажмите кнопку \"Пробел\" для повтора этого решения или любую другую для возврата к выбору задания");
-            //            ConsoleKeyInfo key = Console.ReadKey();
-            //            if (key.Key == ConsoleKey.Spacebar)
-            //            {
-            //                Task3();
-            //            }
-            //            else return;
+            restart3();
         }
+
+        class Fractions
+        {
+            private int numerator;
+            private int denominator;
+
+            public void setNumerator(int value)
+            {
+                numerator = value;
+            }
+
+            public void setDenominator(int value)
+            {
+                if (value == 0) throw new ArgumentOutOfRangeException("Знаменатель не может быть равен 0!");
+                denominator = value;
+            }
+
+            public int getNumerator()
+            {
+                return numerator;
+            }
+
+            public int getDenominator()
+            {
+                return denominator;
+            }
+
+            public Fractions Plus(Fractions fraction2)
+            {
+                Fractions fraction3 = new Fractions();
+                fraction3.setDenominator(fraction2.getDenominator() * getDenominator());
+                fraction3.setNumerator((fraction2.getNumerator() * getDenominator()) + (getNumerator() * fraction2.getDenominator()));
+                return fraction3;
+            }
+
+            public Fractions Minus(Fractions fraction2)
+            { 
+                Fractions fraction3 = new Fractions();
+                fraction3.setDenominator(fraction2.getDenominator() * getDenominator());
+                fraction3.setNumerator((getNumerator() * fraction2.getDenominator()) - (fraction2.getNumerator() * getDenominator()));
+                return fraction3;
+            }
+
+            public Fractions Multiply(Fractions fraction2)
+            {
+                Fractions fraction3 = new Fractions();
+                fraction3.setDenominator(fraction2.getDenominator() * getDenominator());
+                fraction3.setNumerator(fraction2.getNumerator() * getNumerator());
+                return fraction3;
+            }
+
+            public Fractions Divide(Fractions fraction2)
+            {
+                Fractions fraction3 = new Fractions();
+                fraction3.setDenominator(getDenominator() * fraction2.getNumerator());
+                fraction3.setNumerator(getNumerator() * fraction2.getDenominator());
+                return fraction3;
+            }
+
+            public string ToString()
+            {
+               return numerator + "/" + denominator;
+            }
+        }
+
+         static void restart3()
+        { 
+           Console.WriteLine("\nНажмите кнопку \"Пробел\" для повтора этого решения или любую другую для возврата к выбору задания");
+           ConsoleKeyInfo key = Console.ReadKey();
+                if (key.Key == ConsoleKey.Spacebar)
+                {
+                    Task3();
+                }
+                else return;
+        }
+        
     }
 }

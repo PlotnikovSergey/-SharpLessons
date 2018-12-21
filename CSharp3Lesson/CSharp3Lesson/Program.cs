@@ -26,15 +26,15 @@ namespace CSharp3Lesson
                     {
                         case ConsoleKey.D1:
                         case ConsoleKey.NumPad1:
-                            Program.Task1();
+                            Task1();
                             break;
                         case ConsoleKey.D2:
                         case ConsoleKey.NumPad2:
-                            Program.Task2();
+                            Task2();
                             break;
                         case ConsoleKey.D3:
                         case ConsoleKey.NumPad3:
-                            Program.Task3();
+                            Task3();
                             break;
                         case ConsoleKey.D0:
                         case ConsoleKey.NumPad0:
