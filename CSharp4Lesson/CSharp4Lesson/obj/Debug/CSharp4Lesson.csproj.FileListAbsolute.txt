@@ -1,0 +1,7 @@
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp4Lesson\CSharp4Lesson\obj\Debug\CSharp4Lesson.csprojAssemblyReference.cache
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp4Lesson\CSharp4Lesson\obj\Debug\CSharp4Lesson.csproj.CoreCompileInputs.cache
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp4Lesson\CSharp4Lesson\bin\Debug\CSharp4Lesson.exe.config
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp4Lesson\CSharp4Lesson\bin\Debug\CSharp4Lesson.exe
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp4Lesson\CSharp4Lesson\bin\Debug\CSharp4Lesson.pdb
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp4Lesson\CSharp4Lesson\obj\Debug\CSharp4Lesson.exe
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp4Lesson\CSharp4Lesson\obj\Debug\CSharp4Lesson.pdb
