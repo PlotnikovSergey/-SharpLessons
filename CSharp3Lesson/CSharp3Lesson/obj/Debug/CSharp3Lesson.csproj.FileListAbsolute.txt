@@ -1,0 +1,7 @@
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp3Lesson\CSharp3Lesson\bin\Debug\CSharp3Lesson.exe.config
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp3Lesson\CSharp3Lesson\bin\Debug\CSharp3Lesson.exe
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp3Lesson\CSharp3Lesson\bin\Debug\CSharp3Lesson.pdb
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp3Lesson\CSharp3Lesson\obj\Debug\CSharp3Lesson.csprojAssemblyReference.cache
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp3Lesson\CSharp3Lesson\obj\Debug\CSharp3Lesson.csproj.CoreCompileInputs.cache
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp3Lesson\CSharp3Lesson\obj\Debug\CSharp3Lesson.exe
+D:\Programming\CSharpProjects\GeekBrainsLessons\CSharp3Lesson\CSharp3Lesson\obj\Debug\CSharp3Lesson.pdb
