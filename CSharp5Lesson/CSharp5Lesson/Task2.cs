@@ -78,7 +78,7 @@ namespace CSharp5Lesson
             Console.WriteLine("Вариант б)\n");
             Console.WriteLine("Введите логин\n");
             string inputLogin = Console.ReadLine();
-            Regex reg = new Regex(@"[\D][A-Za-z0-9]{1,9}$"); // При числе букв больше 1 \D не работает
+            Regex reg = new Regex(@"^[\D][A-Za-z0-9]{1,9}$");
             if (reg.IsMatch(inputLogin))
             {
                 Console.ForegroundColor = ConsoleColor.Green;
